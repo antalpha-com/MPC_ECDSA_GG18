@@ -40,11 +40,13 @@ func (round *round3) Start() *tss.Error {
 		if j == i {
 			continue
 		}
-		// ContextJ := append(round.temp.ssid, new(big.Int).SetUint64(uint64(j)).Bytes()...)
-		ContextJ := append(round.temp.ssid)
+		ContextJ := append(round.temp.ssid, new(big.Int).SetUint64(uint64(j)).Bytes()...)
+		// ContextJ := append(round.temp.ssid)
+		str := string(ContextJ)
 
 		// Alice_end
 		go func(j int, Pj *tss.PartyID) {
+			ContextJ := []byte(str)
 			defer wg.Done()
 			r2msg := round.temp.signRound2Messages[j].Content().(*SignRound2Message)
 			proofBob, err := r2msg.UnmarshalProofBob()
@@ -76,6 +78,7 @@ func (round *round3) Start() *tss.Error {
 		}(j, Pj)
 		// Alice_end_wc
 		go func(j int, Pj *tss.PartyID) {
+			ContextJ := []byte(str)
 			defer wg.Done()
 			r2msg := round.temp.signRound2Messages[j].Content().(*SignRound2Message)
 			// fmt.Printf("round3: to:%v,from:%v,r2msg.ProofBobWc: %v\n", i, Pj.Index, r2msg.ProofBobWc)

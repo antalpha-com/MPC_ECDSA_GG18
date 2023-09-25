@@ -11,6 +11,8 @@ import (
 	"fmt"
 	"sync"
 
+	big "github.com/bnb-chain/tss-lib/v2/gmp"
+
 	errorspkg "github.com/pkg/errors"
 
 	"github.com/bnb-chain/tss-lib/v2/crypto/mta"
@@ -31,8 +33,8 @@ func (round *round2) Start() *tss.Error {
 	errChs := make(chan *tss.Error, (len(round.Parties().IDs())-1)*2)
 	wg := sync.WaitGroup{}
 	wg.Add((len(round.Parties().IDs()) - 1) * 2)
-	// ContextI := append(round.temp.ssid, new(big.Int).SetUint64(uint64(i)).Bytes()...)
-	ContextI := append(round.temp.ssid)
+	ContextI := append(round.temp.ssid, new(big.Int).SetUint64(uint64(i)).Bytes()...)
+	// ContextI := append(round.temp.ssid)
 	for j, Pj := range round.Parties().IDs() {
 		if j == i {
 			continue
