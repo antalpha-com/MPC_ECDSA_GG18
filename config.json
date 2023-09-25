@@ -1,0 +1,79 @@
+
+{
+  "caPath": "./communication/config/ca.crt",
+  "clientCertPath" : "./communication/config/client.crt",
+  "serverCertPath": "./communication/config/server.crt",
+  "clientKeyPath" : "./communication/config/client.key",
+  "serverKeyPath" : "./communication/config/server.key",
+  "timeOutSecond": 6000,
+  "centerServerID": "a",
+  "partyIDs":["a", "b", "c"],
+  "localPartyID": "c",
+  "otherPartyIDs":["a", "b"],
+  "localAddr" : "localhost:8002",
+  "totalPartyCount" : 3,
+  "threshold": 2,
+  "localCanBeServer": true,
+
+  "otherPartyInfo":[
+    {
+      "id": "b",
+      "connRole": "client"
+    },
+    {
+      "id": "a",
+      "connRole": "client"
+    }
+  ],
+
+  "localPartyIDIMK": {
+    "MessageWrapperPartyID": {
+      "Id": "c",
+      "Moniker": "P[3]",
+      "Key": [1,2,3]
+    },
+    "Index": 2
+  },
+  "partyIDsIMK":[ {
+    "MessageWrapperPartyID": {
+      "Id": "a",
+      "Moniker": "P[1]",
+      "Key": [1,2,1]
+    },
+    "Index": 0
+  },
+    {
+      "MessageWrapperPartyID": {
+        "Id": "b",
+        "Moniker": "P[2]",
+        "Key": [1,2,2]
+      },
+      "Index": 1
+    },
+    {
+      "MessageWrapperPartyID": {
+        "Id": "c",
+        "Moniker": "P[3]",
+        "Key": [1,2,3]
+      },
+      "Index": 2
+    }],
+
+  "otherPartyIDsIMK":[
+    {
+      "MessageWrapperPartyID": {
+        "Id": "b",
+        "Moniker": "P[2]",
+        "Key": [1,2,2]
+      },
+      "Index": 1
+    },
+    {
+      "MessageWrapperPartyID": {
+        "Id": "a",
+        "Moniker": "1",
+        "Key": [1,2,1]
+      },
+      "Index": 0
+    }]
+}
