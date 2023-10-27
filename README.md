@@ -175,4 +175,6 @@ Note: Unlike single-machine testing, in a multi-party real deployment, sending a
 ## Reference
 
 \[1\] https://eprint.iacr.org/2019/114.pdf
+## License
+[License](https://github.com/antalpha-com/MPC_ECDSA_GG18/blob/master/LICENSE)
 
