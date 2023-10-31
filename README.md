@@ -23,7 +23,7 @@ We can create a multi-party deployment instance through the following steps:
 5. Start multiple participants simultaneously by running the main function to establish communication.
 6. Enter commands on the server side to execute the protocols.
 
-For detailed steps, please refer to the [user manual](https://github.com/antalpha-com/MPC_ECDSA_GG18/blob/master/doc/User%20Manual_gg18).
+For detailed steps, please refer to the [user manual](https://github.com/antalpha-com/MPC_ECDSA_GG18/blob/master/doc/User%20Manual.md)
 
 
 
