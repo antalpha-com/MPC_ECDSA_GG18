@@ -1,18 +1,16 @@
-# Multi-Party Threshold Signature Scheme
+# GG18 Open Source Algorithm Library
+
+[Chinese version](https://github.com/antalpha-com/MPC_ECDSA_GG18/blob/master/doc/README.md)
 
 ## Introduction
 
-This is an implementation of multi-party {t, n}-threshold ECDSA (Elliptic Curve Digital Signature Algorithm) based on the CCS 2018 paper by Gennaro and Goldfeder [1], along with a similar approach using EdDSA (Edwards-curve Digital Signature Algorithm). This library includes three protocols:
+Secure Multi-Party Computation (MPC) technology is a cryptographic protocol that allows multiple participants to collaboratively perform computations without revealing their private inputs. MPC signatures are highly secure digital signature schemes used for distributed signing among multiple participants. MPC signatures enable multiple participants to securely cooperate in digital signing without the risk of private key exposure, which is crucial for privacy and security-focused applications.
 
-- Key Generation, used to create secret shares ('keygen').
-- Signing, used to generate signatures using secret shares ('signing').
-- Key Refresh, used to change the group of participants while keeping the secrets ('resharing').
+In the field of digital asset management, MPC technology has a wide range of applications, and multi-party signatures and key sharding will continue to enhance the security of digital assets. In the realm of privacy computing, MPC will find extensive use in fields such as healthcare, finance, and market analysis to ensure data privacy while enabling efficient computations. In summary, MPC technology will become an essential tool in the digital world to meet the growing demands for privacy and security.
 
-ECDSA is widely used in cryptocurrencies such as Bitcoin, Ethereum (secp256k1 curve), NEO (NIST P-256 curve), and more. EdDSA is also extensively used in cryptocurrencies like Cardano, Aeternity, Stellar Lumens, and others. For these currencies, this technology can be used to create cryptographic wallets where multiple parties must collaborate to sign transactions. Each key/address stores a local secret share, which is kept secure by the protocol and never revealed to others.
+GG18 represents a groundbreaking threshold MPC ECDSA signature scheme that allows multiple participants to engage in threshold signing. GG18 is not only of significant theoretical importance but has also successfully entered practical applications, occupying a prominent position in the field of multi-party collaborative signing. Binance has open-sourced a Go language implementation of MPC signatures based on the GG18 paper, and it has gained wide recognition and usage.
 
-Binance has open-sourced a Go language implementation of the MPC signature based on the GG18 paper, which has gained wide recognition and usage. Note that this is a library for developers. You can find a TSS tool that can be used with the Binance Chain CLI [here](https://docs.binance.org/tss.html).
-
-Building upon the GG18 open-source solution, this project further enhances security, performance, and functionality. It aims to assist the industry in promoting and deploying MPC signature schemes more effectively. In addition, we provide detailed code comments and deployment examples to help MPC beginners better understand and integrate it into commercial software and systems. In terms of performance, the project utilizes efficient libraries such as the GMP library, Paillier, and CRT operations, significantly improving computational efficiency. Furthermore, considering that Binance's open-source library provides only local test cases, i.e., single-machine deployment scenarios, this project presents real multi-party deployment scenarios to help beginners better understand MPC signatures and integrate them into commercial software and systems.
+Antalpha has gone further to optimize and enhance the GG18 open-source solution in terms of security, performance, and functionality. This effort is aimed at assisting the industry in promoting and deploying MPC signature schemes more effectively. Additionally, we provide detailed code comments and deployment examples to help MPC beginners better understand and integrate it into their projects.
 
 ## Deployment
 
@@ -25,7 +23,7 @@ We can create a multi-party deployment instance through the following steps:
 5. Start multiple participants simultaneously by running the main function to establish communication.
 6. Enter commands on the server side to execute the protocols.
 
-For detailed steps, please refer to the user manual.
+For detailed steps, please refer to the [user manual](https://github.com/antalpha-com/MPC_ECDSA_GG18/blob/master/doc/User%20Manual_gg18).
 
 
 
@@ -174,7 +172,9 @@ Note: Unlike single-machine testing, in a multi-party real deployment, sending a
 
 ## Reference
 
-\[1\] https://eprint.iacr.org/2019/114.pdf
+\[1\][Fast Multiparty Threshold ECDSA with Fast Trustless Setup]( https://eprint.iacr.org/2019/114.pdf)
+
 ## License
-[License](https://github.com/antalpha-com/MPC_ECDSA_GG18/blob/master/LICENSE)
+
+[Apache License 2.0](https://github.com/antalpha-com/MPC_ECDSA_GG18/blob/master/LICENSE)
 
