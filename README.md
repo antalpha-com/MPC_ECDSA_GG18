@@ -1,6 +1,6 @@
 # GG18 Open Source Algorithm Library
 
-[Chinese version](https://github.com/antalpha-com/MPC_ECDSA_GG18/blob/master/doc/README.md)
+[中文版](https://github.com/antalpha-com/MPC_ECDSA_GG18/blob/master/doc/README.md)
 
 ## Introduction
 
