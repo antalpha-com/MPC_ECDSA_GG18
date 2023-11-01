@@ -1,6 +1,6 @@
 # GG18开源算法库
 
-[英文版](https://github.com/antalpha-com/MPC_ECDSA_GG18#readme)
+[English Version](https://github.com/antalpha-com/MPC_ECDSA_GG18#readme)
 
 ## 介绍
 
