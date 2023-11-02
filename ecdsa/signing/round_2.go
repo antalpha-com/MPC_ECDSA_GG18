@@ -102,8 +102,6 @@ func (round *round2) Start() *tss.Error {
 			round.temp.c2jis[j] = c2ji
 			round.temp.pi2jis[j] = pi2ji
 			//	fmt.Println("pi2ji", Pj, pi2ji)
-			// fmt.Printf("round2: i = %v, j = %v, pi2ji = %+v\n", i, j, pi2ji.U)
-			// fmt.Printf("round2: to:%v,from:%v,r2msg.ProofBob: %v,r2msg.x: %v\n", i, Pj.Index, *pi2ji.ProofBob, *pi2ji.U.X())
 			fmt.Printf("round2: to:%v,from:%v,r2msg.x: %v\n", i, Pj.Index, *pi2ji.U.X())
 
 			if err != nil {
